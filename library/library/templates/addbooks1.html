@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h1>You can add books here</h1>
+
+<form method="POST">
+  {% csrf_token %}
+<table>
+  {{form.as_table}}
+</table>
+  <input type="submit">
+</form>
+{% endblock %}

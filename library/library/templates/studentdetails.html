@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h1>View student Details</h1>
+<table class="table table-bordered">
+    <tr>
+        <th>NAME</th>
+        <th>AGE</th>
+        <th>PLACE</th>
+    </tr>
+
+    {% for i in details %}
+    <tr>
+        <td>{{i.name}}</td>
+        <td>{{i.age}}</td>
+        <td>{{i.place}}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h1>You can find the factorial here:</h1>
+
+<form method="POST">
+    {% csrf_token %}
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Number:</label>
+  <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="enter the number" name="n">
+</div><br><br>
+
+
+     <div class="mb-3">
+         <input type="submit" class="form-control">
+     </div>
+    </form>
+{% if f %}
+<h2>The factorial is: {{f}}</h2>
+{% endif %}
+
+{% endblock %}
